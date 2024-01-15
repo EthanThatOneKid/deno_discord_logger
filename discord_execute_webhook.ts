@@ -25,8 +25,6 @@ export function execute(
     url.searchParams.set("wait", "true");
   }
 
-  console.log({ jsonBody });
-
   return f(
     url,
     {
