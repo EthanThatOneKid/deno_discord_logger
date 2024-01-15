@@ -1,0 +1,7 @@
+{
+  "tasks": {
+    "lock": "deno cache --lock=deno.lock --lock-write deps.ts",
+    "udd": "deno run -Ar https://deno.land/x/udd/main.ts deps.ts && deno task lock",
+    "example": "deno run --env --allow-env=DISCORD_WEBHOOK_URL --allow-net=discord.com examples/example.ts"
+  }
+}
