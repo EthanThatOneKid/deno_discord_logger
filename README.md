@@ -10,4 +10,5 @@ See the [example](./examples/example.ts) for a usage example.
 
 ---
 
-Programmed with [🦕](https://deno.land/) by [**@EthanThatOneKid**](https://etok.codes/)
+Programmed with [🦕](https://deno.land/) by
+[**@EthanThatOneKid**](https://etok.codes/)

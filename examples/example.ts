@@ -27,11 +27,21 @@ function formatDiscordWebhook(payload: string) {
 
 log.setup({
   handlers: {
-    default: new DiscordWebhookHandler("DEBUG", {
+    console: new log.ConsoleHandler("DEBUG", {
+      formatter: log.formatters.jsonFormatter,
+      useColors: true,
+    }),
+    discord: new DiscordWebhookHandler("DEBUG", {
       webhookURL: Deno.env.get("DISCORD_WEBHOOK_URL")!,
       formatter: log.formatters.jsonFormatter,
       formatDiscordWebhook,
     }),
+  },
+  loggers: {
+    default: {
+      level: "DEBUG",
+      handlers: ["console", "discord"],
+    },
   },
 });
 
